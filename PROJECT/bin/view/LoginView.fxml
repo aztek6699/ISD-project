@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: #34495E;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <GridPane layoutX="6.0" layoutY="-7.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-7.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="50.0" />
+          <ColumnConstraints hgrow="ALWAYS" minWidth="-Infinity" prefWidth="210.0" />
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="50.0" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="80.0" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="75.0" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" />
+        </rowConstraints>
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="56.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <children>
+                  <TextField fx:id="edtUsername" promptText="Username">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="edtPassword" promptText="Password">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </VBox>
+            <ImageView fitHeight="63.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../../resources/logoFrequency.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@../../resources/pleaseLogin.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" spacing="5.0" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../resources/iconUser.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets right="8.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../resources/iconPassword.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </VBox>
+            <JFXButton fx:id="loginButton" onAction="#performLogin" style="-fx-background-color: #60b0f4;" text="Login" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" top="5.0" />
+               </GridPane.margin>
+            </JFXButton>
+            <Hyperlink fx:id="forgotPasswordLink" onAction="#callForgotPassword" text="Forgot Password?" textFill="#b2babb" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Hyperlink>
+            <Text fill="#b2babb" strokeType="OUTSIDE" strokeWidth="0.0" text="Not a Member?" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Text>
+            <Hyperlink fx:id="signUpLink" onAction="#callSignUp" text="Sign Up" textFill="#60b0f4" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

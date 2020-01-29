@@ -1,0 +1,1 @@
+Multi room chat application using Java Fx (UI), java sockets (connection to other instances of application) and hibernate (connection to MySQL)
